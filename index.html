@@ -1,16 +1,318 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html" />
-    <meta charset="utf-8" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Visualgv.com</title>
-    <link rel="stylesheet" href="styles.css"  type="text/css" />
-    <script type="text/javascript">
+</head>
+<body>
+    <header>
+        <h1>Visualgv.com</h1>
+        <h2>Other</h2><!--Search <h2>Logout</h2><h2>Help</h2><h2>Settings</h2><h2>Notifications</h2><h2>Language</h2> -->
+        <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Organizaciones</a></li>
+            <li><a href="#">Files</a></li>
+            <li><a href="#">Processes</a></li>
+            <li><a href="#">Asset Inventory</a></li>
+            <li><a href="#">Matches</a></li>
+            <li><a href="#">Augmented Reality</a></li>
+            <li><a href="#">Evidences</a></li>
+            <li><a href="#">Reports</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="module">
+            <h3>Organizations</h3>
+            <div>
+                <p>Module content for Organizations will go here.</p>
+                <form role="organizacion"
+      class="organizacion"
+      action="index.html"
+      method="post"
+      enctype="application/x-www-form-urlencoded">
+    <fieldset>
+        <div class="organizacion">
+          <h1>Organización, Empresa o tu mismo</h1>
+          <p>
+            <label for="organizacion">
+              <input type="text"
+                    name="organizacion"
+                    value="Crear el nombre de tu organización"
+                    placeholder="Organización, empresa o tu mismo"
+                    aria-label="Organización, empresa o tu mismo"
+                    size="40">
+            </label></p>
+          <button type="submit" name="buttonCrearOrganizacion">Crear</button>
+          <button type="submit" name="buttonEditarOrganizacion">Edita</button>
+          <button type="submit" name="buttonBorrarOrganizacion">Borrar</button>
+          <button type="submit" name="buttonArchivaOrganizacion">Archivar</button>
+          <button type="submit" name="buttonRecuperarOrganizacion">Recuperar</button>
+        </div>
+    </fieldset>
+  </form>
+  <form role="invitarUsuariosOrganizacion"
+        class="invitarUsuariosOrganizacion"
+        action="index.html"
+        method="post"
+        enctype="application/x-www-form-urlencoded">
+    <fieldset>
+      <div class="invitarUsuariosOrganizacion">
+        <p>
+          <label for="invitarUsuariosOrganizacion">Invitar a usuarios a tu organización
+          <input type="email"
+            placeholder="Correo electrónico para invitar a organización"
+            aria-label="Correo electrónico para invitar a  organización" size="50">
+          </label></p>
+          <button type="submit" name="buttonEmailOrganizacion">Invitar usuarios a organización</button>
+        </div>
+    </fieldset>
+  </form>
+  
+  <form role="proyecto"
+      class="proyecto"
+      action="index.html"
+      method="post"
+      enctype="application/x-www-form-urlencoded">
+    <fieldset>
+        <div class="proyecto">
+          <h1>Proyectos, Campañas o Eventos</h1>
+          <p>
+            <label for="proyecto">
+              <input type="text"
+                    name="proyecto"
+                    value="Crear el nombre de tu proyecto"
+                    placeholder="Crea el nombre tu proyecto"
+                    aria-label="Crea el nombre de tu proyecto"
+                    size="40">
+            </label></p>
+          <button type="submit" name="buttonCrearProyecto">Crear</button>
+          <button type="submit" name="buttonEditarProyecto">Edita</button>
+          <button type="submit" name="buttonBorrarProyecto">Borrar</button>
+          <button type="submit" name="buttonArchivarProyecto">Archivar</button>
+          <button type="submit" name="buttonRecuperarProyecto">Recuperar</button>
+        </div>
+    </fieldset>
+  </form>
+  <form role="invitarUsuariosProyecto"
+        class="invitarUsuariosProyecto"
+        action="index.html"
+        method="post"
+        enctype="application/x-www-form-urlencoded">
+    <fieldset>
+      <div class="invitarUsuariosProyecto">
+        <p>
+          <label for="invitarUsuariosProyecto">Invitar a usuarios a tu Proyecto
+          <input type="email"
+                 placeholder="Correo electrónico para invitar a Proyecto"
+                 aria-label="Correo electrónico para invitar a Proyecto" size="50">
+          </label></p>
+          <button type="submit" name="buttonEmailProyecto">Invitar usuarios a Proyecto</button>
+        </div>
+    </fieldset>
+  </form>
+            </div>
+        </section>
+        
+        <section class="module">
+            <h3>Files</h3>
+            <p>Module content for Files will go here.</p>
+            <form role="File Upload"
+            class="File Upload"
+            action="index.html"
+            method="post"
+            enctype="application/x-www-form-urlencoded"
+            enctype="multipart/form-data"
+            action=""
+          <fieldset>
+              <div class="File Upload">
+                <h1>Suba un archivo - Upload a File</h1>
+                <p>Drop files to upload, Browse (your device)
+                <p>
+                  <label for="File Upload">
+                    <input type="file"
+                          name="File Upload or foto"
+                          value="File Upload"
+                          placeholder="File Upload"
+                          aria-label="Guarda tus archivos"
+                          size="40">
+                  </label></p>
+        <!--progress para archivos muy pesados-->
+        <button type="submit" name="Browse your device">Subir</button>
+        </div>
+        </fieldset>
+        </form>
+      
+        <form role="invitarUsuariosArchivo"
+              class="invitarUsuariosArchivo"
+              action="index.html"
+              method="post"
+              enctype="application/x-www-form-urlencoded">
+        <fieldset>
+          <div class="invitarUsuariosArchivo">
+            <p>
+              <label for="invitarUsuariosArchivo">Invitar usuarios a tu Archivo
+                <input type="email"
+                       placeholder="Correo electrónico para compartir acceso a tu archivo"
+                       aria-label="Correo electrónico para compartir acceso a tu archivo" size="50">
+              </label></p>
+              <button type="submit" name="buttonEmailArchivo">Compartir acceso a tu archivo</button>
+              <h4><strong> Activos Digitales </strong> Archivos,
+                fotos y diseños en general, Digital asset,
+                Data asset, Archivos y activos digitales y físicos
+              </h4>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div>
+          <h4>Autorizador de archivos - Chat para ponerse de acuerdo</h4>
+          <h4>Comentarios</h4>
+          <p><label for="">Chat
+            <textarea name="name" rows="5" cols="50"></textarea>
+            </label></p>
+            <textarea rows="3" cols="30">Comentarios de otras personas</textarea>
+      <br>
+      <!--Los chats de los demás van del lado izquierdo y los míos del lado derecho
+      esto para seguir las prácticas comunes de whatsapp -->
+      <textarea rows "30" cols="30">Comentarios mios</textarea>
+      <button type="submit">comentar</button>
+      <br>
+      <input type="text" placeholder="Correo electrónico" />
+      <button type="submit">Invitar usuarios</button>
+      </div>
+        </section>
+        <section class="module">
+            <h1>Publica en redes sociales tu archivo </h1>
+
+
+            <h3>Processes</h3>
+            <p>Module content for Processes will go here.</p>
+            <div>
+                <h1>Envia a un proceso o otra industria diferente</h1>
+<h1>Procesos o industrias</h1>
+<h4>Tipo </h4>
+  <select>
+    <option>Publicidad</option>
+    <option>Administración de organizaciones</option>
+  </select>
+  <br>
+  <hr>
+    <h4>Subcategoría </h4>
+  <select>
+    <option>Exterior Fija</option>
+    <option>Exterior Movil</option>
+  </select>
+       <p>Tipos de industria:
+           <select name="tipo de proceso" size="1">
+       <option>Impresión offest</option>
+       <option>Impresión digital gran formato sobre materiales rígidos y flexibles</option>
+       <option>Diseño industrial</option>
+       <option>Seguimiento GPS</option>
+       <option>Otro</option>
+       <option>Otro</option>
+       </select>
+           <select>
+           <option>Publicidad</option>
+           <option>Administración de organizaciones</option>
+         </select>
+           <select>
+           <option>Exterior Fija</option>
+           <option>Exterior Movil</option>
+         </select>
+       </p>
+       <h2>Ordenes de trabajo</h2>
+       <h2>Rastreo de personas</h2>
+       <hr>
+            </div>
+        </section>
+
+        <section class="module">
+            <h3>Asset Inventory</h3>
+            <p>Module content for Asset Inventory will go here.</p>
+            <div>
+                <h1><strong>Elementos de Inventario - Items</strong></h1>
+<h2>Subir Catálogo en formato ...</h2>
+<p>Aquí podría subir el catálogo cualquier empresa siguiendo las practicas comunes
+de Amazon, mercado libre , ebay </p>
+<label for="File Upload">
+    <input type="file"
+          name="File Upload or foto"
+          value="File Upload"
+          placeholder="File Upload"
+          aria-label="Guarda tus archivos"
+          size="40">
+  </label>
+<button type="submit">Archivo - Send to process</button>
+
+            </div>
+        </section>
+
+        <section class="module">
+            <h3>Matches</h3>
+            <p>Module content for Matches will go here.</p>
+        </section>
+
+        <section class="module">
+            <h3>Augmented Reality</h3>
+            <p>Module content for Augmented Reality will go here.</p>
+        </section>
+
+        <section class="module">
+            <h3>Evidences</h3>
+            <p>Module content for Evidences will go here.</p>
+            <div>
+            </fieldset>
+        </form>
+                  </div>
+              </section>
+              
+              <section class="module">
+                  <h3>Files</h3>
+                  <p>Module content for Files will go here.</p>
+                  <form role="File Upload"
+                  class="File Upload"
+                  action="index.html"
+                  method="post"
+                  enctype="application/x-www-form-urlencoded"
+                  enctype="multipart/form-data"
+                  action=""
+                <fieldset>
+                    <div class="File Upload">
+                      <h1>Suba un archivo - Upload a File</h1>
+                      <p>Drop files to upload, Browse (your device)
+                      <p>
+                        <label for="File Upload">
+                          <input type="file"
+                                name="File Upload or foto"
+                                value="File Upload"
+                                placeholder="File Upload"
+                                aria-label="Guarda tus archivos"
+                                size="40">
+                        </label></p>
+              <!--progress para archivos muy pesados-->
+              <button type="submit" name="Browse your device">Subir</button>
+              </div>
+              </fieldset>
+
+            </div>
+        </section>
+
+        <section class="module">
+            <h3>Reports</h3>
+            <p>Module content for Reports will go here.</p>
+        </section>
+    </main>
+    <footer>
+        VisualGV - Digital Asset Management SaaS &copy; 2025
+    </footer>
+    <script>
+        function toggleMenu() {
+            document.querySelector('nav').classList.toggle('open');
+        }
     </script>
-  </head>
-  <body>
-<h1>Software</h1>
-<h1>Música</h1>
-<h1>Otros</h1>
-  </body>
-</html>  
+</body>
+</html>
