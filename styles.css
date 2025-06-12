@@ -1,65 +1,118 @@
-* {
-  color:0;
-}
-html {
-  background-color: none;
-}
-h1 {
-  color: black;
-}
-h2 {
-  color: silver;
-}
-h3, h4, h5, h6 {
-  color: white;
-  margin: 10px auto;
-  border: 10px;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #6dacc9;
+  margin: 10px;
   padding: 10px;
-  text-align: center;
-}
-p {
-  color: purple;
-  font: 20px helvetica;
-  border-top: 5px solid #000000;
+  display: grid; /* Corrected missing semicolon */
+  grid-template-columns: 250px 1fr; /* Two columns: 250px for nav, remaining for main */
+  grid-gap: 20px;
 }
 
-.header {
-  margin: 20px;
-  color: red;
-  border: 10px;
+header {
+  grid-column: 1 / span 2;    
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin-bottom: 10px; 
 }
+
 nav {
-  border: 5px solid;
-  margin: 10px;
+  background-xcolor: white;
+  color: #333; /* Corrected text color to be visible on white background */
   padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
 }
 
-.organizacion {
-  margin: 10px;
-  border: 5px solid #FFFFFF;
+nav ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+nav li {
+  margin-bottom: 10px; /* Add space between each list item */
+}
+
+nav li:last-child {
+  margin-bottom: 0; /* Remove margin from the last list item */
+}
+
+nav a {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit text color */
+  display: block; /* Make the link fill the list item */
+  padding: 10px; /* Add padding inside the link */
+  border-radius: 8px; /* Add border radius to the link */
+  background-color: #f0f0f0; /* Add background color to the link */
+}
+
+nav a:hover {
+  background-color: #e0e0e0; /* Change background color on hover */
+}
+
+h3 {
+  color: #fff;
+  background-color: #333;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+main {
+  background-color: #6dacc9;
   padding: 10px;
+  border-radius: 8px;
+}
+
+footer {
+  grid-column: 1 / span 2; /* Footer spans both columns */
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
   text-align: center;
+  margin-top: 20px; /* Space above footer */
 }
 
-#container
-{
-  width: 550px;
-  background-color: #FFFFFF;
+@media (max-width: 768px) {
+  body {
+      grid-template-columns: 1fr; /* Single column layout */
+  }
+
+  nav {
+      position: absolute;
+      top: 0;
+      left: -250px; /* Hide the menu by default */
+      width: 250px;
+      height: 100%;
+      background-color: white;
+      transition: left 0.3s ease;
+  }
+
+  nav.open {
+      left: 0; /* Show the menu when open */
+  }
+
+  nav ul {
+      flex-direction: column;
+  }
+
+  nav li {
+      margin-bottom: 10px;
+  }
+
+  .menu-toggle {
+      display: block;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+  }
 }
 
-#Header
-{
-  padding: 10px 20px;
-  background-color: #999999;
-}
-
-#Content
-{
-  padding: 10px 20px;
-  background-color: #CCC;
-}
-
-#Footer{
-  padding: 10px 20px;
-  background-color: #999;
-}
